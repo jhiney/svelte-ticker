@@ -7,6 +7,7 @@ yarn.lock
 /packages/create-svelte/template/CHANGELOG.md
 /packages/kit/src/packaging/test/watch/package
 /documentation/types.js
+.env.local
 .env
 .vercel_build_output
 .svelte-kit
