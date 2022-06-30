@@ -24,7 +24,7 @@
 </script>
 
 <div class="overflow-x-auto">
-	<table data-theme="corporate" class="table rounded-full">
+	<table data-theme="corporate" class="table rounded">
 		<thead>
 			<tr>
 				<th>Ticker</th>
