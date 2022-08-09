@@ -2,7 +2,7 @@ import { variables } from "./variables.js";
 import { apiData } from "./store";
 
 export default function getPositions() {
-	fetch(variables.ALPACA_BASE_URL + "v2/positions", {
+	return fetch(variables.ALPACA_MARKETS_BASE_URL + "v2/positions", {
 		method: "GET",
 		headers: {
 			"APCA-API-KEY-ID": variables.baseKey,
