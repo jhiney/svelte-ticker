@@ -2,11 +2,11 @@
   "name": "svelte-ticker",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync"
+    "dev": "vite dev",
+    "build": "vite build",
+    "package": "vite package",
+    "preview": "vite preview",
+    "prepare": "vite sync"
   },
   "devDependencies": {
     "@brainandbones/skeleton": "^0.30.7",
@@ -23,6 +23,7 @@
   },
   "type": "module",
   "dependencies": {
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "vite": "^3.0.9"
   }
 }
