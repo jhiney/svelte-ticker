@@ -7,21 +7,29 @@
 
 	import getName from "../lib/getName.js";
 	import { onMount } from "svelte";
+	import CompanyLogo from "./CompanyLogo.svelte";
 
 	onMount(async () => {
 		symbol_name = await getName(symbol);
+
+		if (symbol_name.includes(".")) {
+			symbol_name = symbol_name.substring(0, symbol_name.indexOf("."));
+		}
 	});
 </script>
 
-<div class="shadow-lg max-w-sm rounded overflow-hidden border-2 border-black dark:border-zinc-400">
+<div
+	class="shadow-lg max-w-sm rounded overflow-hidden border-2 border-black dark:border-surface-400"
+>
 	<div class="px-6 py-4">
-		<div class="font-bold text-xl mb-2 text-cyan-400 text-left">
-			{symbol} + {symbol_name}
-		</div>
+		<p class="text-center font-bold text-warning-400">{symbol_name}</p>
 
-		<p class="text-zinc-400 text-base dark:text-zinc-400 text-left">
-			The current price is <a class="text-cyan-400">${current_price}</a> and closed yesterday at
-			<a class="text-cyan-400">${lastday_price}</a>
+		<p class="text-zinc-400 text-center text-base dark:text-accent-300 text-left">
+			The current price is <a class="text-primary-400">${current_price}</a> and closed yesterday at
+			<a class="text-primary-400">${lastday_price}</a>
 		</p>
+		<div class="mb-2 py-4 flex justify-center">
+			<CompanyLogo {symbol} />
+		</div>
 	</div>
 </div>
